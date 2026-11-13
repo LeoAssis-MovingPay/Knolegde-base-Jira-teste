@@ -1,0 +1,13 @@
+# Obsidian (estado local)
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# n8n — nunca versionar credenciais
+*.credentials.json
+.env

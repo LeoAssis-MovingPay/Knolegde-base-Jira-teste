@@ -1,0 +1,13 @@
+{
+  "documentar": true,
+  "motivo": "",
+  "sistema": "CERC",
+  "tipo": "bug",
+  "titulo": "Timeout no envio de agenda para a CERC",
+  "tags": ["timeout", "agenda", "retry"],
+  "sintoma": "...",
+  "causa_raiz": "...",
+  "solucao": "...",
+  "como_validar": "...",
+  "observacoes": "..."
+}
