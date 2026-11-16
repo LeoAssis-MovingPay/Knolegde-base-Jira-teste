@@ -24,7 +24,7 @@ revisada pelo responsável no Slack e publicada aqui.
 
 ### Outro (1)
 
-| Ticket | Título | Tipo | Resolvido em |
+| Nota | Tickets | Tipo | Atualizada em |
 |---|---|---|---|
-| [DSMM-465](dsmm/outro/DSMM-465.md) | [TESTE KB] CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias | bug | 2026-11-16 |
+| [[TESTE KB] CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias](dsmm/outro/DSMM-465.md) | DSMM-465 | bug | 2026-11-16 |
 <!-- INDICE:FIM -->

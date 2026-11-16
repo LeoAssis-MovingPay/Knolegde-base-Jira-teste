@@ -1,1 +1,21 @@
-[]
+[
+ {
+  "caminho": "dsmm/outro/DSMM-465.md",
+  "titulo": "[TESTE KB] CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
+  "sistema": "Outro",
+  "tipo": "bug",
+  "tags": [
+   "Console",
+   "Relatório de vendas",
+   "Performance",
+   "Timeout",
+   "504",
+   "API"
+  ],
+  "tickets": [
+   "DSMM-465"
+  ],
+  "atualizado": "2026-11-16",
+  "resumo": ""
+ }
+]
