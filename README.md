@@ -20,5 +20,11 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-_Nenhuma nota ainda._
+**Total:** 1 notas
+
+### Sistema não especificado no conteúdo do ticket. Por favor, forneça o nome do sistema. (1)
+
+| Ticket | Título | Tipo | Resolvido em |
+|---|---|---|---|
+| [DSMM-447](dsmm/sistema-não-especificado-no-conteúdo-do-ticket.-por-favor,-forneça-o-nome-do-sistema./DSMM-447.md) | Título do ticket não fornecido. Por favor, forneça um título claro e conciso. | Tipo de documentação não especificado (ex: Incidente, Solicitação, Mudança, Melhoria). Por favor, forneça o tipo. | 2026-11-16 |
 <!-- INDICE:FIM -->
