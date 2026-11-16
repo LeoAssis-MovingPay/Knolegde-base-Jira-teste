@@ -26,7 +26,7 @@ revisada pelo responsável no Slack e publicada aqui.
 
 | Ticket | Título | Tipo | Resolvido em |
 |---|---|---|---|
-| [DSMM-465](dsmm/outro/DSMM-465.md) | Contexto do Chamado Ausente | bug | 2026-11-16 |
+| [DSMM-465](dsmm/outro/DSMM-465.md) | CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias | bug | 2026-11-16 |
 
 ### Sistema não especificado no conteúdo do ticket. Por favor, forneça o nome do sistema. (1)
 
