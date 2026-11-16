@@ -1,30 +1,42 @@
 ---
-ticket: DSMM-000
-titulo: ""
-sistema: CERC
-tipo: bug            # bug | melhoria
-tags: []
-responsavel:
-resolvido_em: AAAA-MM-DD
-jira: https://SEU-SITE.atlassian.net/browse/DSMM-000
-pr:
+title: "Exportação do relatório analítico estoura timeout no ALB"
+tags: ["dsmm", "bug", "backoffice", "timeout"]
+created: AAAA-MM-DD
+updated: AAAA-MM-DD
+tickets: ["DSMM-000"]
+sistema: "BackOffice"
+tipo: bug
+pr: ""
 ---
 
-# DSMM-000 — Título
+# 🐛 Exportação do relatório analítico estoura timeout no ALB
 
-Sistema: [[CERC]]
+> [!summary] Resumo
+> O que acontecia, por que acontecia e como foi resolvido.
+
+## Contexto
+Sistema e funcionalidade envolvidos (tela, endpoint, serviço, tabelas). Links: [[bo-modulo-transferencias]].
 
 ## Sintoma
-O que o usuário/cliente viu. Mensagens de erro, endpoint, horário.
+O que o usuário via e como reproduzir.
 
 ## Causa raiz
-Por que aconteceu. (Para melhoria: motivação da mudança.)
+Explicação técnica.
 
 ## Solução
-O que foi alterado — serviço, arquivo, tabela, configuração.
+O que mudou, por repositório/PR. Antes/depois em tabela.
 
 ## Como validar
-Passos para confirmar que está resolvido.
+Passos para confirmar.
 
-## Observações
-Riscos, prevenção, débitos técnicos, links "ver também".
+## Se acontecer de novo
+> [!tip] Como reconhecer e diagnosticar
+> Sinais, logs, o que verificar primeiro.
+
+## Referências
+- PRs e notas relacionadas.
+
+## Ocorrências
+
+### DSMM-000 · AAAA-MM-DD · Nome do responsável
+Primeira ocorrência: deu origem a esta nota.

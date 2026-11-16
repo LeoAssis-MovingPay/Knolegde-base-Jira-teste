@@ -3,7 +3,7 @@ name: Atualizar índice
 on:
   push:
     branches: [main]
-    paths: ["dsmm/**"]
+    paths: ["dsmm/**", "scripts/gerar_indice.py"]
   workflow_dispatch:
 
 permissions:
@@ -24,10 +24,10 @@ jobs:
       - run: python scripts/gerar_indice.py
       - name: Commit do índice
         run: |
-          if git diff --quiet README.md; then exit 0; fi
+          if git diff --quiet README.md indice.json && git ls-files --error-unmatch indice.json >/dev/null 2>&1; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md indice.json
           git commit -m "docs: atualiza índice"
           git pull --rebase
           git push

@@ -1,29 +1,58 @@
 #!/usr/bin/env python3
-"""Gera o índice do README a partir do frontmatter das notas em dsmm/."""
-import pathlib, re
+"""Gera o índice (tabela no README.md + indice.json) a partir do frontmatter das notas em dsmm/.
+
+O indice.json é lido pelo n8n para achar notas parecidas antes de chamar a IA.
+"""
+import json
+import pathlib
+import re
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 README = RAIZ / "README.md"
+INDICE = RAIZ / "indice.json"
 INI, FIM = "<!-- INDICE:INICIO -->", "<!-- INDICE:FIM -->"
 
 
-def frontmatter(texto):
-    m = re.match(r"^---\s*\n(.*?)\n---", texto, re.S)
-    dados = {}
+def valor(v):
+    v = v.split(" #")[0].strip()
+    if v[:1] in '["':
+        try:
+            return json.loads(v)
+        except Exception:
+            pass
+    return v.strip('"')
+
+
+def le_nota(arq):
+    texto = arq.read_text(encoding="utf-8")
+    m = re.match(r"^---\s*\n(.*?)\n---\s*\n?(.*)$", texto, re.S)
+    dados, corpo = {}, texto
     if m:
+        corpo = m.group(2)
         for linha in m.group(1).splitlines():
-            if ":" in linha:
+            if ":" in linha and not linha.startswith((" ", "\t")):
                 k, v = linha.split(":", 1)
-                dados[k.strip()] = v.split("#")[0].strip().strip('"')
-    return dados
+                dados[k.strip()] = valor(v)
+    r = re.search(r"> \[!summary\][^\n]*\n((?:>.*\n?)+)", corpo)
+    resumo = " ".join(l.lstrip(">").strip() for l in r.group(1).splitlines()).strip() if r else ""
+    tickets = dados.get("tickets") or ([dados["ticket"]] if dados.get("ticket") else [])
+    if isinstance(tickets, str):
+        tickets = [tickets]
+    tags = dados.get("tags") or []
+    return {
+        "caminho": arq.relative_to(RAIZ).as_posix(),
+        "titulo": dados.get("title") or dados.get("titulo") or arq.stem,
+        "sistema": dados.get("sistema") or arq.parent.name,
+        "tipo": dados.get("tipo", ""),
+        "tags": tags if isinstance(tags, list) else [tags],
+        "tickets": tickets,
+        "atualizado": dados.get("updated") or dados.get("resolvido_em", ""),
+        "resumo": resumo[:400],
+    }
 
 
-notas = []
-for arq in sorted((RAIZ / "dsmm").rglob("*.md")):
-    d = frontmatter(arq.read_text(encoding="utf-8"))
-    d["caminho"] = arq.relative_to(RAIZ).as_posix()
-    d.setdefault("sistema", arq.parent.name)
-    notas.append(d)
+notas = [le_nota(a) for a in sorted((RAIZ / "dsmm").rglob("*.md"))]
+INDICE.write_text(json.dumps(notas, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 if not notas:
     corpo = "_Nenhuma nota ainda._"
@@ -31,12 +60,12 @@ else:
     partes = [f"**Total:** {len(notas)} notas\n"]
     for sistema in sorted({n["sistema"] for n in notas}, key=str.lower):
         grupo = sorted((n for n in notas if n["sistema"] == sistema),
-                       key=lambda n: n.get("resolvido_em", ""), reverse=True)
+                       key=lambda n: str(n["atualizado"]), reverse=True)
         partes.append(f"### {sistema} ({len(grupo)})\n")
-        partes.append("| Ticket | Título | Tipo | Resolvido em |\n|---|---|---|---|")
+        partes.append("| Nota | Tickets | Tipo | Atualizada em |\n|---|---|---|---|")
         for n in grupo:
-            partes.append(f"| [{n.get('ticket', '?')}]({n['caminho']}) | {n.get('titulo', '')} "
-                          f"| {n.get('tipo', '')} | {n.get('resolvido_em', '')} |")
+            partes.append(f"| [{n['titulo']}]({n['caminho']}) | {', '.join(n['tickets'])} "
+                          f"| {n['tipo']} | {n['atualizado']} |")
         partes.append("")
     corpo = "\n".join(partes).strip()
 

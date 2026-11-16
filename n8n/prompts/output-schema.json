@@ -1,13 +1,11 @@
 {
   "documentar": true,
   "motivo": "",
-  "sistema": "CERC",
-  "tipo": "bug",
-  "titulo": "Timeout no envio de agenda para a CERC",
-  "tags": ["timeout", "agenda", "retry"],
-  "sintoma": "...",
-  "causa_raiz": "...",
-  "solucao": "...",
-  "como_validar": "...",
-  "observacoes": "..."
+  "acao": "nova",
+  "nota_existente": "",
+  "adendo": "",
+  "sistema": "BackOffice",
+  "titulo": "Exportação do relatório analítico estoura timeout de 60s no ALB",
+  "tags": ["timeout", "relatorio", "performance"],
+  "corpo": "# 🐛 Exportação do relatório analítico estoura timeout de 60s no ALB\n\n> [!summary] Resumo\n> ...\n\n## Contexto\n..."
 }
