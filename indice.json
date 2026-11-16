@@ -1,5 +1,26 @@
 [
  {
+  "caminho": "dsmm/console/relatorio-de-vendas-por-periodo-retorna-504-em-intervalos-ac.md",
+  "titulo": "Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
+  "sistema": "Console",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "console",
+   "relatorio",
+   "vendas",
+   "timeout",
+   "504",
+   "performance"
+  ],
+  "tickets": [
+   "DSMM-465"
+  ],
+  "atualizado": "2026-11-16",
+  "resumo": "O relatório de vendas por período no Console falhava com erro 504 (Gateway Timeout) para intervalos superiores a 30 dias devido a uma query ineficiente que impedia o uso de índice na tabela `vendas_parcelas`. A correção envolveu otimizar a query para usar o índice, adicionar paginação ao endpoint e implementar tratamento de erro no frontend, resultando na geração rápida do relatório."
+ },
+ {
   "caminho": "dsmm/outro/DSMM-465.md",
   "titulo": "[TESTE KB] CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
   "sistema": "Outro",

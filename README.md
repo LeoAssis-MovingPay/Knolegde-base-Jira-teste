@@ -20,7 +20,13 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-**Total:** 1 notas
+**Total:** 2 notas
+
+### Console (1)
+
+| Nota | Tickets | Tipo | Atualizada em |
+|---|---|---|---|
+| [Relatório de vendas por período retorna 504 em intervalos acima de 30 dias](dsmm/console/relatorio-de-vendas-por-periodo-retorna-504-em-intervalos-ac.md) | DSMM-465 | bug | 2026-11-16 |
 
 ### Outro (1)
 
