@@ -20,7 +20,13 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-**Total:** 1 notas
+**Total:** 2 notas
+
+### Outro (1)
+
+| Ticket | Título | Tipo | Resolvido em |
+|---|---|---|---|
+| [DSMM-465](dsmm/outro/DSMM-465.md) | Contexto do Chamado Ausente | bug | 2026-11-16 |
 
 ### Sistema não especificado no conteúdo do ticket. Por favor, forneça o nome do sistema. (1)
 
