@@ -122,5 +122,27 @@
   ],
   "atualizado": "2026-11-17",
   "resumo": "Um problema causava um estado de carregamento infinito na aba de Recebimentos do Portal do Distribuidor. A causa raiz foi identificada e a correção foi implementada através da demanda DSMM-63, resolvendo o comportamento."
+ },
+ {
+  "caminho": "dsmm/outro/venda-nao-splitada-devido-a-validacao-incorreta-de-acordo-co.md",
+  "titulo": "Venda não splitada devido a validação incorreta de acordo comercial no Split Pós-Venda",
+  "sistema": "Outro",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "outro",
+   "split",
+   "pos-venda",
+   "acordo-comercial",
+   "gateway",
+   "software-express",
+   "liquidacao"
+  ],
+  "tickets": [
+   "DSMM-85"
+  ],
+  "atualizado": "2026-11-17",
+  "resumo": "A venda do EC 1098793 não estava sendo splitada conforme regra configurada no Console, mesmo após tentativas de re-cadastro. A causa foi uma validação incompleta do acordo comercial no fluxo de split pós-venda, onde o `merchants_id` do estabelecimento não era explicitamente considerado. A correção envolveu ajustar o payload da chamada de validação para incluir o `merchants_id`."
  }
 ]
