@@ -101,5 +101,26 @@
   ],
   "atualizado": "2026-11-16",
   "resumo": ""
+ },
+ {
+  "caminho": "dsmm/outro/carregamento-infinito-na-aba-de-recebimentos-do-portal-do-di.md",
+  "titulo": "Carregamento infinito na aba de Recebimentos do Portal do Distribuidor",
+  "sistema": "Outro",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "outro",
+   "portal",
+   "distribuidor",
+   "recebimentos",
+   "carregamento",
+   "frontend"
+  ],
+  "tickets": [
+   "DSMM-34"
+  ],
+  "atualizado": "2026-11-17",
+  "resumo": "Um problema causava um estado de carregamento infinito na aba de Recebimentos do Portal do Distribuidor. A causa raiz foi identificada e a correção foi implementada através da demanda DSMM-63, resolvendo o comportamento."
  }
 ]
