@@ -20,7 +20,7 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-**Total:** 3 notas
+**Total:** 4 notas
 
 ### BackOffice (1)
 
@@ -33,6 +33,12 @@ revisada pelo responsável no Slack e publicada aqui.
 | Nota | Tickets | Tipo | Atualizada em |
 |---|---|---|---|
 | [Relatório de vendas por período retorna 504 em intervalos acima de 30 dias](dsmm/console/relatorio-de-vendas-por-periodo-retorna-504-em-intervalos-ac.md) | DSMM-465 | bug | 2026-11-16 |
+
+### Manager (1)
+
+| Nota | Tickets | Tipo | Atualizada em |
+|---|---|---|---|
+| [Transações pagas não aparecem na conciliação de recebíveis sem filtro de EC](dsmm/manager/transacoes-pagas-nao-aparecem-na-conciliacao-de-recebiveis.md) | DSMM-71 | bug | 2026-11-17 |
 
 ### Outro (1)
 

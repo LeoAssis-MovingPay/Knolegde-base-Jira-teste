@@ -43,6 +43,27 @@
   "resumo": "O relatório de vendas por período no Console falhava com erro 504 (Gateway Timeout) para intervalos superiores a 30 dias devido a uma query ineficiente que impedia o uso de índice na tabela `vendas_parcelas`. A correção envolveu otimizar a query para usar o índice, adicionar paginação ao endpoint e implementar tratamento de erro no frontend, resultando na geração rápida do relatório."
  },
  {
+  "caminho": "dsmm/manager/transacoes-pagas-nao-aparecem-na-conciliacao-de-recebiveis.md",
+  "titulo": "Transações pagas não aparecem na conciliação de recebíveis sem filtro de EC",
+  "sistema": "Manager",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "manager",
+   "conciliacao",
+   "recebiveis",
+   "ec",
+   "filtro",
+   "api-registradora"
+  ],
+  "tickets": [
+   "DSMM-71"
+  ],
+  "atualizado": "2026-11-17",
+  "resumo": "A tela de conciliação de recebíveis não exibia transações pagas por padrão, mostrando uma mensagem de que não havia recebíveis. Isso ocorria porque a consulta de dados exigia a aplicação manual de um filtro de Estabelecimento Comercial (EC)."
+ },
+ {
   "caminho": "dsmm/outro/DSMM-465.md",
   "titulo": "[TESTE KB] CONSOLE - Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
   "sistema": "Outro",
