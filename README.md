@@ -20,7 +20,13 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-**Total:** 2 notas
+**Total:** 3 notas
+
+### BackOffice (1)
+
+| Nota | Tickets | Tipo | Atualizada em |
+|---|---|---|---|
+| [Adição do campo 'observação' em relatório de transferências no Console Contas a Pagar](dsmm/backoffice/adicao-do-campo-observacao-em-relatorio-de-transferencias-no.md) | DSMM-30 | bug | 2026-11-17 |
 
 ### Console (1)
 

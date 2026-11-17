@@ -1,5 +1,27 @@
 [
  {
+  "caminho": "dsmm/backoffice/adicao-do-campo-observacao-em-relatorio-de-transferencias-no.md",
+  "titulo": "Adição do campo 'observação' em relatório de transferências no Console Contas a Pagar",
+  "sistema": "BackOffice",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "backoffice",
+   "transferencias",
+   "relatorio",
+   "observacao",
+   "backend",
+   "frontend",
+   "exportacao"
+  ],
+  "tickets": [
+   "DSMM-30"
+  ],
+  "atualizado": "2026-11-17",
+  "resumo": "O relatório de transferências no console de Contas a Pagar não exibia a descrição do motivo de cancelamento de lotes, presente no campo `observacao`. Isso ocorria porque o campo não era incluído na consulta do backend nem processado pelas funções de exportação no frontend. A correção envolveu adicionar o campo `transferencias.observacao` na model de transferências do backend e nas funções de const"
+ },
+ {
   "caminho": "dsmm/console/relatorio-de-vendas-por-periodo-retorna-504-em-intervalos-ac.md",
   "titulo": "Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
   "sistema": "Console",
