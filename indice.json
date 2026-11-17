@@ -22,6 +22,26 @@
   "resumo": "O relatório de transferências no console de Contas a Pagar não exibia a descrição do motivo de cancelamento de lotes, presente no campo `observacao`. Isso ocorria porque o campo não era incluído na consulta do backend nem processado pelas funções de exportação no frontend. A correção envolveu adicionar o campo `transferencias.observacao` na model de transferências do backend e nas funções de const"
  },
  {
+  "caminho": "dsmm/backoffice/transacoes-nao-exibidas-na-tela-de-visualizacao-sem-filtro.md",
+  "titulo": "Transações não exibidas na tela de visualização sem filtro de Estabelecimento Comercial (EC)",
+  "sistema": "BackOffice",
+  "tipo": "bug",
+  "tags": [
+   "dsmm",
+   "bug",
+   "backoffice",
+   "transacoes",
+   "filtro",
+   "exibicao",
+   "ec"
+  ],
+  "tickets": [
+   "DSMM-66"
+  ],
+  "atualizado": "2026-11-17",
+  "resumo": "Usuários não conseguiam visualizar transações na tela do BackOffice sem aplicar um filtro de Estabelecimento Comercial (EC), resultando na mensagem 'Não há recebíveis no período solicitado...'. A causa inferida foi um comportamento inesperado na consulta do backend que exigia o filtro de EC. A solução ajustou a lógica da consulta para exibir as transações por padrão, mesmo sem o filtro aplicado."
+ },
+ {
   "caminho": "dsmm/console/relatorio-de-vendas-por-periodo-retorna-504-em-intervalos-ac.md",
   "titulo": "Relatório de vendas por período retorna 504 em intervalos acima de 30 dias",
   "sistema": "Console",

@@ -20,13 +20,14 @@ revisada pelo responsável no Slack e publicada aqui.
 > Gerado automaticamente por `scripts/gerar_indice.py` — não edite entre os marcadores.
 
 <!-- INDICE:INICIO -->
-**Total:** 4 notas
+**Total:** 5 notas
 
-### BackOffice (1)
+### BackOffice (2)
 
 | Nota | Tickets | Tipo | Atualizada em |
 |---|---|---|---|
 | [Adição do campo 'observação' em relatório de transferências no Console Contas a Pagar](dsmm/backoffice/adicao-do-campo-observacao-em-relatorio-de-transferencias-no.md) | DSMM-30 | bug | 2026-11-17 |
+| [Transações não exibidas na tela de visualização sem filtro de Estabelecimento Comercial (EC)](dsmm/backoffice/transacoes-nao-exibidas-na-tela-de-visualizacao-sem-filtro.md) | DSMM-66 | bug | 2026-11-17 |
 
 ### Console (1)
 
